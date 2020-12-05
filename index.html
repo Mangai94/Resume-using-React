@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mangayarkarasi Resume</title>
+    <link rel="stylesheet" href="index.css">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .name {
+            border-bottom: 2px solid black;
+            padding-bottom: 5px;
+        }
+
+        .resumeBody {
+            width: 55%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .table td,
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            width: 50%
+        }
+
+        .table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+    <script type="text/babel">
+        const rootElement = document.getElementById('root');
+
+        let Name = () => <h1 className="name">Mangayarkarasi J</h1>;
+        let Address = () =>
+        {
+            return (
+                <h5>
+               <i>14-d,Rubyblock,OlympiaOpaline,Navalur,Chennai,603103</i>
+               <br/>
+               <i>jmangai94@gmail.com   7708218696</i>
+                   </h5>
+            )
+        }
+        let skillsList =
+            [
+                'Development of Enterprise level fully functional web applications',
+                'Server side development',
+                'Process automation to reduce the manual efforts',
+                'Code cleanup to address memory leak and inefficientblocks',
+                'Client side UI development',
+                `Facilitate root cause analysis of system issues and identify ideas to improve system performance and 
+                impact availability`
+            ];
+        
+        let certificationsList = 
+        [
+            'Datastructures and Algorithms (online)',
+            'BEC-VantagecertificationbyCambridgeUniversity',
+            'AMCAT Certified Software Engineer'
+        ]
+      
+        const Objective = () => {
+            return (
+                <div>
+                <h3 className="name">Objective</h3>
+             <div>
+                    To associate myself within organization that provides a challenging job and an opportunity to
+                    prove my innovative skills through sincere and dedicated hardwork
+             </div>
+            </div>
+                
+            )
+        }
+
+        const SkillsHeader = () => <h4 className="name">Skills And Abilities</h4>
+
+        const SkillsListSelector = () => {
+            return (
+                <ul>
+                    {skillsList.map(skill => <li key={skill}>{skill}</li>)}
+                </ul>
+            )
+        }
+
+        const ITSkillsHeading = () => <h4 className="name">IT Skills</h4>
+
+        const ITSkills = () => {
+            return (
+                
+            <table className="table">
+                <tbody>
+                    <tr>
+                        <th>Client Side</th>
+                        <td>
+                            <ul>
+                                <li>Html, Css, Bootstrap, Javascript</li>
+                                <li>AngularJS,Angular </li>
+                                <li>ASP.NETWebForms,MVC</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Server Side</th>
+                        <td>
+                            <ul>
+                                <li>ASP.NETWebServices,WebAPI </li>
+                                <li>EntityFramework </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Database</th>
+                        <td>
+                            <ul>
+                                <li>SQL Server, Db2 </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Testing</th>
+                        <td>
+                            <ul>
+                                <li>MS Test </li>
+                                <li>NUnit</li>
+                            </ul>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <th>Source Control</th>
+                        <td>
+                            <ul>
+                                <li>Github </li>
+                                <li>SVN</li>
+                            </ul>
+                        </td> 
+                    </tr>
+                </tbody>
+            </table>
+
+            )
+        }
+
+        const Certifications = () => <h4 className="name">Certifications</h4>
+
+        const CertificationsListSelector = () => {
+            return (
+                <ul>
+                    {certificationsList.map(cert => <li key={cert}>{cert}</li>)}
+                </ul>
+            )
+        }
+
+        const OtherSkillsTitle = () => <h4 className="name">Other Skills</h4>
+
+        const OtherSkills = () =>{
+            return (
+                <ul>
+                    <li>Mainframe,COBOL,JCL</li>
+                    <li>Core Java</li>
+                </ul>
+            )
+        }
+
+        const Bodytemplate = () => {
+            return (
+            
+                <div className="resumeBody">
+                    <Name/>
+                    <Address/>
+                    <Objective />
+                    <SkillsHeader />
+                    <SkillsListSelector />
+                    <ITSkillsHeading/>
+                    <ITSkills />
+                    <Certifications />
+                    <CertificationsListSelector />
+                    <OtherSkillsTitle />
+                    <OtherSkills />
+                </div>
+            )
+        }
+
+        
+
+        ReactDOM.render(<Bodytemplate />, rootElement);
+    </script>
+</body>
+
+</html>

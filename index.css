@@ -1,0 +1,25 @@
+#headerDiv{
+   margin-left: auto;
+   margin-right: auto;
+   width: 50% ;
+   font-size: 18px !important;
+   border-bottom: 2px solid black;
+   padding-bottom: 10px;
+}
+
+#add1{
+   width: 50%
+}
+
+#res{
+    width: 50%;
+}
+
+#title{
+    font-size: 22px;
+    text-align: center; 
+}
+
+#address{
+    display: flex;
+}
